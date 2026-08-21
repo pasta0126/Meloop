@@ -1,0 +1,17 @@
+services:
+  meloop:
+    build: .
+    container_name: meloop
+    restart: unless-stopped
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.meloop.rule=Host(`meloop.northernarchive.com`)"
+      - "traefik.http.routers.meloop.entrypoints=websecure"
+      - "traefik.http.routers.meloop.tls.certresolver=le"
+      - "traefik.http.services.meloop.loadbalancer.server.port=80"
+
+networks:
+  proxy:
+    external: true

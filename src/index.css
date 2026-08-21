@@ -1,0 +1,47 @@
+:root {
+  --color-bg: #0a0918;
+  --color-surface: #15121f;
+  --color-surface-alt: #1e1a2e;
+  --color-border: #2c2640;
+
+  --color-text: #f5f3fb;
+  --color-text-muted: #a89fc2;
+
+  --accent-1: #8ea2f4;
+  --accent-2: #c9a0f0;
+  --accent-3: #f78cbc;
+  --accent-4: #fd9c7c;
+  --accent-5: #ffd27a;
+
+  --color-accent: var(--accent-3);
+  --color-accent-hover: var(--accent-2);
+  --gradient-accent: linear-gradient(
+    90deg,
+    var(--accent-1),
+    var(--accent-2),
+    var(--accent-3),
+    var(--accent-4),
+    var(--accent-5)
+  );
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: dark;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  letter-spacing: inherit;
+}
